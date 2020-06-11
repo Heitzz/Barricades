@@ -1,8 +1,13 @@
---[[
-	Script: Metal Detector
-	Version: 1.0
-	Created by DidVaitel (http://steamcommunity.com/profiles/76561198108670811)
-]]
+//=============================================================================//
+//========= Daniel Heitz, All rights reserved. ============//
+//
+// @Author: Daniel Heitz <DidVaitel>
+// @Email: contact@gmodhub.com
+// @Created: 11.06.2020
+// @Modified: 11.06.2020
+//
+//=============================================================================//
+
 AddCSLuaFile( "cl_init.lua" )
 AddCSLuaFile( "shared.lua" )
 include('shared.lua')
@@ -19,17 +24,8 @@ function ENT:Initialize()
 	self:SetMaterial('phoenix_storms/gear')
 	self:GetPhysicsObject():Sleep()
 
-	if (file.Exists("didvaitel/metal_detector_config.txt", "DATA")) then
-		dataTable = util.JSONToTable(file.Read("didvaitel/metal_detector_config.txt", "DATA"))
-		self.IllegalWeapons = dataTable.IllegalWeapons or {}
-		self.WeaponWhiteList = dataTable.WhitelistTable or {}
-	else
-		self.IllegalWeapons = {}
-		self.WeaponWhiteList = {"weapon_physcannon", "weapon_physgun", "weapon_medkit", "weapon_fists" }
-	end
-
 	self:SetMode(1) // Sleeping Mode
-	
+
 end
 
 function ENT:Think()

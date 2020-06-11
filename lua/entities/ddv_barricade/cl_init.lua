@@ -1,8 +1,13 @@
---[[
-	Script: Metal Detector
-	Version: 1.0
-	Created by DidVaitel (http://steamcommunity.com/profiles/76561198108670811)
-]]
+//=============================================================================//
+//========= Daniel Heitz, All rights reserved. ============//
+//
+// @Author: Daniel Heitz <DidVaitel>
+// @Email: contact@gmodhub.com
+// @Created: 11.06.2020
+// @Modified: 11.06.2020
+//
+//=============================================================================//
+
 include("shared.lua")
 
 local colors = { Color(0, 0, 0), Color(0, 255, 0), Color(255, 0, 0) }
